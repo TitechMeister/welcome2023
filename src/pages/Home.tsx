@@ -1,13 +1,13 @@
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Twitter from '../Twiiter';
-import * as React from 'react';
+import img_top from './img/home/top.jpg'
 
 function Home() {
     return (
         <div className="Home">
             <Typography variant='h4' margin={2}>新歓ページへようこそ</Typography>
             <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${24}px)` } }}>
-                <img src="/img/top.jpg"  width="100%"></img>
+                <img src={img_top}  width="100%"></img>
                 <Typography paragraph>
                     こんにちは！東京工業大学　Meister（マイスター）の新歓ページにようこそ。
                 </Typography>

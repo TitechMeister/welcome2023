@@ -4,6 +4,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import { styled } from '@mui/material/styles';
+import img_line_logo from './img/logo/LINE_Brand_icon.png'
 
 
 const Item = styled(Card)(({ theme }) => ({
@@ -19,7 +20,7 @@ function Links() {
             <Typography variant='h4'>外部リンク</Typography>
             <List>
                 <ListItem>
-                    <Card sx={{ margin: 2 }}>
+                    <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
                             <Avatar  sx={{ color: 'skyblue',bgcolor: 'white' }}>
                                 <HomeIcon />
@@ -29,7 +30,7 @@ function Links() {
                     </Card>
                 </ListItem>
                 <ListItem>
-                    <Card sx={{ margin: 2 }}>
+                    <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
                             <Avatar  sx={{ color: 'blue',bgcolor: 'white' }}>
                                 <TwitterIcon />
@@ -39,7 +40,7 @@ function Links() {
                     </Card>
                 </ListItem>
                 <ListItem>
-                    <Card sx={{ margin: 2 }}>
+                    <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
                             <Avatar  sx={{ color: 'red',bgcolor: 'white' }}>
                                 <YouTubeIcon/>
@@ -49,7 +50,7 @@ function Links() {
                     </Card>
                 </ListItem>
                 <ListItem>
-                    <Card sx={{ margin: 2 }}>
+                    <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
                             <Avatar  sx={{ color: 'black',bgcolor: 'white' }}>
                                 <GitHubIcon/>
@@ -59,10 +60,9 @@ function Links() {
                     </Card>
                 </ListItem>
                 <ListItem>
-                    <Card sx={{ margin: 2 }}>
+                    <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
-                            <Avatar src="/img/logo/LINE_Brand_icon.png" sx={{ color: 'white',bgcolor: 'green' }}>
-                                
+                            <Avatar src={img_line_logo} sx={{ color: 'white',bgcolor: 'green' }}>
                             </Avatar>
                             <Typography variant='h6' padding={2}><a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=722fzwlk">LINE</a></Typography>
                         </Stack>

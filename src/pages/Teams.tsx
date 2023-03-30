@@ -6,6 +6,17 @@ import { styled } from '@mui/material/styles';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+import img_drive_1 from './img/teams/drive/1.jpg'
+import img_drive_2 from './img/teams/drive/2.jpg'
+import img_electronics_1 from './img/teams/electronics/1.jpg'
+import img_electronics_2 from './img/teams/electronics/2.jpg'
+import img_fairing_1 from './img/teams/fairing/1.jpg'
+import img_frame_1 from './img/teams/frame/1.jpg'
+import img_frame_2 from './img/teams/frame/2.jpg'
+import img_propeller_1 from './img/teams/propeller/1.jpg'
+import img_propeller_2 from './img/teams/propeller/2.jpg'
+import img_wing_1 from './img/teams/wing/1.jpg'
+import img_wing_2 from './img/teams/wing/2.jpg'
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,10 +35,10 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="1">
-                            <img src="/img/teams/wing/1.jpg" />
+                            <img src={img_wing_1} />
                         </ImageListItem>
                         <ImageListItem key="2">
-                            <img src="/img/teams/wing/2.jpg" />
+                            <img src={img_wing_2} />
                         </ImageListItem>
                     </ImageList>
 
@@ -77,10 +88,10 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="3">
-                            <img src="/img/teams/propeller/1.jpg" />
+                            <img src={img_propeller_1} />
                         </ImageListItem>
                         <ImageListItem key="4">
-                            <img src="/img/teams/propeller/2.jpg" />
+                            <img src={img_propeller_2} />
                         </ImageListItem>
                     </ImageList>
 
@@ -99,10 +110,10 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="1">
-                            <img src="/img/teams/frame/1.jpg" />
+                            <img src={img_frame_1 }/>
                         </ImageListItem>
                         <ImageListItem key="2">
-                            <img src="/img/teams/frame/2.jpg" />
+                            <img src={img_frame_2} />
                         </ImageListItem>
                     </ImageList>
 
@@ -125,10 +136,10 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="1">
-                            <img src="/img/teams/drive/1.jpg" />
+                            <img src={img_drive_1} />
                         </ImageListItem>
                         <ImageListItem key="2">
-                            <img src="/img/teams/drive/2.jpg" />
+                            <img src={img_drive_2} />
                         </ImageListItem>
                     </ImageList>
 
@@ -147,7 +158,7 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="1">
-                            <img src="/img/teams/fairing/1.jpg" />
+                            <img src={img_fairing_1} />
                         </ImageListItem>
                         {/* <ImageListItem key="2">
                             <img src="/img/teams/fairing/2.jpg" />
@@ -170,10 +181,10 @@ function Teams() {
 
                     <ImageList>
                         <ImageListItem key="1">
-                            <img src="/img/teams/electronics/1.jpg" />
+                            <img src={img_electronics_1} />
                         </ImageListItem>
                         <ImageListItem key="2">
-                            <img src="/img/teams/electronics/2.jpg" />
+                            <img src={img_electronics_2} />
                         </ImageListItem>
                     </ImageList>
 

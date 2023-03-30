@@ -2,6 +2,12 @@ import * as React from 'react';
 import { Chip, Paper, Typography } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import img_electronics_1 from './img/events/electronics_1.jpg'
+import img_wing_1 from './img/events/wing_1.jpg'
+import img_top_1 from './img/events/top_1.jpg'
+import img_top_2 from './img/events/top_2.jpg'
+import img_contest_1 from './img/events/contest_1.jpg'
+import img_contest_2 from './img/events/contest_2.jpg'
 
 function Event() {
     return (
@@ -9,10 +15,10 @@ function Event() {
             <Typography variant='h4' padding={2}>新歓イベントの紹介</Typography>
             <ImageList>
                 <ImageListItem key="1">
-                    <img src="/img/events/events22.jpg" />
+                    <img src={img_top_1} />
                 </ImageListItem>
                 <ImageListItem key="2">
-                    <img src="/img/events/pilot-1.jpg" />
+                    <img src={img_top_2} />
                 </ImageListItem>
             </ImageList>
 
@@ -32,7 +38,7 @@ function Event() {
                 </Typography>
                 <ImageList>
                     <ImageListItem key="1">
-                    <img src="/img/events/electronics-1.jpg" />
+                    <img src={img_electronics_1} />
                     </ImageListItem>
                 </ImageList>
             </Paper>
@@ -43,7 +49,7 @@ function Event() {
                 </Typography>
                 <ImageList>
                     <ImageListItem key="1">
-                    <img src="/img/events/wing-1.jpg" />
+                    <img src={img_wing_1} />
                     </ImageListItem>
                 </ImageList>
             </Paper>
@@ -57,10 +63,10 @@ function Event() {
                 </Typography>
                 <ImageList>
                     <ImageListItem key="1">
-                        <img src="/img/events/events21a.jpg" />
+                        <img src={img_contest_1} />
                     </ImageListItem>
                     <ImageListItem key="2">
-                        <img src="/img/events/events21b.jpg" />
+                        <img src={img_contest_2} />
                     </ImageListItem>
                 </ImageList>
             </Paper>

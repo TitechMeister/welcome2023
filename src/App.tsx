@@ -1,18 +1,17 @@
 import * as React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import Home from './pages/Home';
-import Teams from './pages/Teams';
-import Event from './pages/Event';
-import Links from './pages/Links';
-import FAQ from './pages/FAQ';
-import Interview from './pages/Interview'
+import Home from './pages/Home/Home';
+import Teams from './pages/Teams/Teams';
+import Event from './pages/Event/Event';
+import Links from './pages/Links/Links';
+import FAQ from './pages/FAQ/FAQ';
+import Interview from './pages/Interview/Interview'
 import NotFound from './pages/NotFound';
 import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppBar, List, ListItem, ListItemButton, Toolbar, IconButton, ListItemText, Drawer, Button, Grid } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
-import Access from './pages/Access';
-import Container from '@mui/material/Container';
+import Access from './pages/Access/Access';
 
 
 interface Props {
@@ -25,7 +24,7 @@ interface Props {
 
 const drawerWidth = 240;
 const pages = [
-  { title: 'トップ', elem: <Home />, url: '/welcome2023/' },
+  { title: 'トップ', elem: <Home />, url: '/' },
   { title: 'インタビュー', elem: <Interview />, url: 'interview' },
   { title: '班紹介', elem: <Teams />, url: 'teams' },
   { title: '新歓イベント', elem: <Event />, url: 'event' },

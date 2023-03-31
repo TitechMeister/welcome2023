@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import * as React from 'react';
-import img_map from './img/access/map.jpg'
+import img_map from './img/map.jpg'
 
 function Access() {
     return (

@@ -4,7 +4,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import { styled } from '@mui/material/styles';
-import img_line_logo from './img/logo/LINE_Brand_icon.png'
+import img_line_logo from './img/LINE_Brand_icon.png'
 
 
 const Item = styled(Card)(({ theme }) => ({

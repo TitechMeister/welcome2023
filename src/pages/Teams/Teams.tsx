@@ -8,6 +8,8 @@ import Fairing from './Fairing/Fairing';
 import Frame from './Frame/Frame';
 import Propeller from './Propeller/Propeller';
 import Wing from './Wing/Wing';
+import Pilot from './Pilot/Pilot';
+import Design from './Design/Design';
 
 function Teams() {
     return (
@@ -20,6 +22,8 @@ function Teams() {
                 <Drive />
                 <Fairing />
                 <Electronics />
+                <Pilot/>
+                <Design/>
             </Stack>
         </div>
     )

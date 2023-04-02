@@ -9,7 +9,7 @@ export default function Frame() {
             <CardHeader title='P・フレーム班' />
 
             <CardContent>
-                <ImageList>
+                <ImageList cols={3} gap={8} sx={{ maxHeight: 600 }}>
                     <ImageListItem key="1">
                         <img src={img_1} />
                     </ImageListItem>

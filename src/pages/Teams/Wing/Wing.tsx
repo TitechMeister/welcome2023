@@ -11,7 +11,7 @@ export default function Wing() {
             <CardHeader title='翼班' />
 
             <CardContent>
-                <ImageList>
+            <ImageList cols={3} gap={8}>
                     <ImageListItem key="1">
                         <img src={img_1} />
                     </ImageListItem>

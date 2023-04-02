@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { ImageList, ImageListItem, Typography, Paper, Card, CardHeader, CardContent } from '@mui/material';
 import img_1 from './img/1.jpg'
-import img_2 from './img/2.jpg'
+import img_2 from './img/2.png'
 
 export default function Fairing() {
     return (
         <Card>
             <CardHeader title='フェアリング班' />
             <CardContent>
-                <ImageList>
+                <ImageList cols={3} gap={8} sx={{ maxHeight: 600 }}>
                     <ImageListItem key="1">
                         <img src={img_1} />
                     </ImageListItem>
-                    {/* <ImageListItem key="2">
-                    <img src="/img/teams/fairing/2.jpg" />
-                </ImageListItem> */}
+                    <ImageListItem key="2">
+                        <img src={img_2} />
+                    </ImageListItem>
                 </ImageList>
 
                 <Typography>

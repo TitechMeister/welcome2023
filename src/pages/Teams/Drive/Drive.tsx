@@ -2,19 +2,23 @@ import * as React from 'react';
 import { ImageList, ImageListItem, Typography, Paper, Card, CardContent, CardHeader } from '@mui/material';
 import img_1 from './img/1.jpg'
 import img_2 from './img/2.jpg'
+import img_3 from './img/3.jpg'
 
 export default function Drive() {
     return (
         <Card>
-            <CardHeader title='駆動班'/>
+            <CardHeader title='駆動班' />
 
             <CardContent>
-                <ImageList>
+                <ImageList cols={3} gap={8} sx={{maxHeight:600}}>
                     <ImageListItem key="1">
                         <img src={img_1} />
                     </ImageListItem>
                     <ImageListItem key="2">
                         <img src={img_2} />
+                    </ImageListItem>
+                    <ImageListItem key="3">
+                        <img src={img_3} />
                     </ImageListItem>
                 </ImageList>
 

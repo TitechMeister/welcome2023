@@ -21,7 +21,7 @@ function Event() {
                     <img src={img_2} />
                 </ImageListItem>
             </ImageList>
-            <Stack>
+            <Stack spacing={2}>
                 <Divider />
                 <Tour />
                 <Divider />

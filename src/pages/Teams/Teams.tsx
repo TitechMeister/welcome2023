@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Typography } from '@mui/material';
-import Divider from '@mui/material/Divider';
 import { Stack } from '@mui/system';
 
 import Drive from './Drive/Drive';
@@ -14,19 +13,13 @@ function Teams() {
     return (
         <div className="Teams">
             <Typography variant='h4' margin={2}>班紹介</Typography>
-            <Stack>
+            <Stack spacing={2}>
                 <Wing />
-                <Divider />
                 <Propeller />
-                <Divider />
                 <Frame />
-                <Divider />
                 <Drive />
-                <Divider />
                 <Fairing />
-                <Divider />
                 <Electronics />
-                <Divider />
             </Stack>
         </div>
     )

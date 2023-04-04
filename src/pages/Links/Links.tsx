@@ -22,7 +22,7 @@ function Links() {
                 <ListItem>
                     <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
-                            <Avatar  sx={{ color: 'skyblue',bgcolor: 'white' }}>
+                            <Avatar  sx={{ color: 'primary',bgcolor: 'white' }}>
                                 <HomeIcon />
                             </Avatar>
                             <Typography variant='h6' padding={2}><a href="https://meister.ne.jp">ホームページ</a></Typography>
@@ -32,7 +32,7 @@ function Links() {
                 <ListItem>
                     <Card sx={{ margin: 1 }}>
                         <Stack direction="row" alignItems={'center'}>
-                            <Avatar  sx={{ color: 'blue',bgcolor: 'white' }}>
+                            <Avatar  sx={{ color: '#1DA1F2',bgcolor: 'white' }}>
                                 <TwitterIcon />
                             </Avatar>
                             <Typography variant='h6' padding={2}><a href="https://twitter.com/meister_2023">公式Twitter</a></Typography>

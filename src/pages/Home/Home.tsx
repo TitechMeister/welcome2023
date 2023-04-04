@@ -1,7 +1,14 @@
 import * as React from 'react'
-import { Box, Typography } from '@mui/material';
-import { Timeline } from 'react-twitter-widgets'
+import { Box, Typography, Card} from '@mui/material';
+
 import img_top from './img/top.jpg'
+import img_teams from './img/teams.jpg'
+import img_event from './img/event.jpg'
+import img_faq from './img/faq.jpg'
+
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from 'react-router-dom';
 
 
 let isLoadwidgets = false;
@@ -10,9 +17,31 @@ function Home() {
         <div className="Home">
             <Typography variant='h4' margin={2}>新歓ページへようこそ</Typography>
             <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${24}px)` } }}>
-                <img src={img_top} width="100%"></img>
+
+                <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000}>
+                    <Box component={"img"} src={img_top}></Box>
+                    <Link to='/Teams'>
+                        <Card>
+                            <Box component={"img"} src={img_teams} />
+                            <p className="legend">班紹介</p>
+                        </Card>
+                    </Link>
+                    <Link to='/Event'>
+                        <Card>
+                            <Box component={"img"} src={img_event} />
+                            <p className="legend">イベント情報</p>
+                        </Card>
+                    </Link>
+                    <Link to='/FAQ'>
+                        <Card>
+                            <Box component={"img"} src={img_faq} />
+                            <p className="legend">よくある質問</p>
+                        </Card>
+                    </Link>
+                </Carousel>
+
                 <Typography paragraph>
-                    こんにちは！東京工業大学　Meister（マイスター）の新歓ページにようこそ。
+                    こんにちは！東京工業大学 Meister(マイスター)の新歓ページにようこそ。
                 </Typography>
                 <Typography paragraph>
                     Meisterは人力飛行機の制作を中心に活動をするものつくりサークルです。

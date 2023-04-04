@@ -7,7 +7,7 @@ import Links from './pages/Links/Links';
 import FAQ from './pages/FAQ/FAQ';
 import Interview from './pages/Interview/Interview'
 import NotFound from './pages/NotFound';
-import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppBar, List, ListItem, ListItemButton, Toolbar, IconButton, ListItemText, Drawer, Button, Grid } from '@mui/material';
+import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppBar, List, ListItem, ListItemButton, Toolbar, IconButton, ListItemText, Drawer, Button } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Timeline } from 'react-twitter-widgets';
 
@@ -109,7 +109,7 @@ export default function App(props: Props) {
               </Box>
               <Box sx={{ flexGrow: 1 }} />
               <IconButton onClick={() => { setPrefersDarkMode(!prefersDarkMode) }}>
-                {prefersDarkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+                {prefersDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
               </IconButton>
             </Toolbar>
           </AppBar>

@@ -27,16 +27,6 @@ function Home() {
                 <Typography paragraph>
                     私たちと、力をあわせて大きなものを完成させる感動を味わってみませんか？
                 </Typography>
-
-                <Timeline
-                    dataSource={{
-                        sourceType: 'profile',
-                        screenName: 'meister_2023'
-                    }}
-                    options={{
-                        height:"600"
-                    }}
-                />
             </Box>
         </div>
     )

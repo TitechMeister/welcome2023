@@ -9,6 +9,7 @@ import Interview from './pages/Interview/Interview'
 import NotFound from './pages/NotFound';
 import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppBar, List, ListItem, ListItemButton, Toolbar, IconButton, ListItemText, Drawer, Button, Grid } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { Timeline } from 'react-twitter-widgets';
 
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import Access from './pages/Access/Access';
@@ -48,8 +49,8 @@ export default function App(props: Props) {
       createTheme({
         palette: {
           mode: prefersDarkMode ? 'dark' : 'light',
-          primary:{
-            main:"#0090F0"
+          primary: {
+            main: "#0090F0"
           },
         },
       }),
@@ -123,17 +124,28 @@ export default function App(props: Props) {
               {drawer}
             </Drawer>
           </Box>
-          <Box component="main" sx={{ p: 3}}>
-              <Toolbar />
-              <Routes>
-                <Route key={"index"} index element={<Home />} />
-                {pages.map((item) => {
-                  return <Route key={item.url} path={item.url} element={item.elem}></Route>;
-                })}
-                <Route key="404" path="*" element={<NotFound />} />
-              </Routes>
+          <Box component="main" sx={{ p: 3 }}>
+            <Toolbar />
+            <Routes>
+              <Route key={"index"} index element={<Home />} />
+              {pages.map((item) => {
+                return <Route key={item.url} path={item.url} element={item.elem}></Route>;
+              })}
+              <Route key="404" path="*" element={<NotFound />} />
+            </Routes>
+            <Timeline
+              dataSource={{
+                sourceType: 'profile',
+                screenName: 'meister_2023'
+              }}
+              options={{
+                height: "600",
+                theme: prefersDarkMode?"dark":"light"
+              }}
+            />
           </Box>
         </BrowserRouter>
+
       </ThemeProvider>
     </Box>
   );

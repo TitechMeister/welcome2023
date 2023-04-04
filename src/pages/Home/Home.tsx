@@ -33,6 +33,9 @@ function Home() {
                         sourceType: 'profile',
                         screenName: 'meister_2023'
                     }}
+                    options={{
+                        height:"600"
+                    }}
                 />
             </Box>
         </div>

@@ -48,6 +48,9 @@ export default function App(props: Props) {
       createTheme({
         palette: {
           mode: prefersDarkMode ? 'dark' : 'light',
+          primary:{
+            main:"#0090F0"
+          },
         },
       }),
     [prefersDarkMode],
@@ -78,7 +81,7 @@ export default function App(props: Props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter basename='/welcome2023/'>
-          <AppBar component="nav">
+          <AppBar component="nav" color='primary' enableColorOnDark>
             <Toolbar>
               <IconButton
                 color="inherit"

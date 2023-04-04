@@ -11,6 +11,9 @@ import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppB
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Timeline } from 'react-twitter-widgets';
 
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import Access from './pages/Access/Access';
 
@@ -38,12 +41,12 @@ const pages = [
 export default function App(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [prefersDarkMode, setPrefersDarkMode] = React.useState(useMediaQuery('(prefers-color-scheme: dark)'))
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const theme = React.useMemo(
     () =>
       createTheme({
@@ -95,8 +98,7 @@ export default function App(props: Props) {
               </IconButton>
 
               <Typography variant='h6' padding={1}>Meister2023</Typography>
-              <Divider orientation="vertical" flexItem />
-              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Box sx={{ display: { xs: 'none', sm: 'block', flexGrow: 1 } }}>
                 {pages.map((item, idx) => (
                   <Link key={item.url} to={item.url}>
                     <Button sx={{ color: '#fff' }}>
@@ -105,6 +107,10 @@ export default function App(props: Props) {
                   </Link>
                 ))}
               </Box>
+              <Box sx={{ flexGrow: 1 }} />
+              <IconButton onClick={() => { setPrefersDarkMode(!prefersDarkMode) }}>
+                {prefersDarkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+              </IconButton>
             </Toolbar>
           </AppBar>
           <Box component="nav">
@@ -140,7 +146,7 @@ export default function App(props: Props) {
               }}
               options={{
                 height: "600",
-                theme: prefersDarkMode?"dark":"light"
+                theme: prefersDarkMode ? "dark" : "light"
               }}
             />
           </Box>

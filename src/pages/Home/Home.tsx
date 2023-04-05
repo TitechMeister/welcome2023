@@ -5,6 +5,8 @@ import img_top from './img/top.jpg'
 import img_teams from './img/teams.jpg'
 import img_event from './img/event.jpg'
 import img_faq from './img/faq.jpg'
+import img_access from './img/access.jpg'
+import img_interview from './img/interview.jpg'
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -20,22 +22,34 @@ function Home() {
 
                 <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000}>
                     <Box component={"img"} src={img_top}></Box>
-                    <Link to='/Teams'>
+                    <Link to='/teams'>
                         <Card>
                             <Box component={"img"} src={img_teams} />
                             <p className="legend">班紹介</p>
                         </Card>
                     </Link>
-                    <Link to='/Event'>
+                    <Link to='/event'>
                         <Card>
                             <Box component={"img"} src={img_event} />
                             <p className="legend">イベント情報</p>
                         </Card>
                     </Link>
-                    <Link to='/FAQ'>
+                    <Link to='/faq'>
                         <Card>
                             <Box component={"img"} src={img_faq} />
                             <p className="legend">よくある質問</p>
+                        </Card>
+                    </Link>
+                    <Link to='/access'>
+                        <Card>
+                            <Box component={"img"} src={img_access} />
+                            <p className="legend">アクセス</p>
+                        </Card>
+                    </Link>
+                    <Link to='/interview'>
+                        <Card>
+                            <Box component={"img"} src={img_interview} />
+                            <p className="legend">インタビュー</p>
                         </Card>
                     </Link>
                 </Carousel>

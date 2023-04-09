@@ -7,6 +7,7 @@ import img_2 from './img/2.jpg'
 import Tour from './Tour/Tour';
 import Electronics from './Electronics/Electronics';
 import Wing from './Wing/Wing';
+import Meeting from './Meeting/Meeting';
 import Contest from './Contest/Contest';
 
 function Event() {
@@ -22,13 +23,10 @@ function Event() {
                 </ImageListItem>
             </ImageList>
             <Stack spacing={2}>
-                <Divider />
+                <Meeting />
                 <Tour />
-                <Divider />
                 <Electronics />
-                <Divider />
                 <Wing />
-                <Divider />
                 <Contest />
             </Stack>
         </div>

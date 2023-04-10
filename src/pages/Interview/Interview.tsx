@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import * as React from 'react';
 import { Document, Page, pdfjs, } from 'react-pdf';
 import doc from './interview.pdf'

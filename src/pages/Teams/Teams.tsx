@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 

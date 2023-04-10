@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Box, Typography, Card} from '@mui/material';
 
 import img_top from './img/top.jpg'
@@ -12,8 +11,6 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
 
-
-let isLoadwidgets = false;
 function Home() {
     return (
         <div className="Home">

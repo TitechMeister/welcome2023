@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ImageList, ImageListItem, Typography, Paper, Card, CardContent, CardHeader } from '@mui/material';
+import { ImageList, ImageListItem, Typography, Card, CardContent, CardHeader } from '@mui/material';
 import img_1 from './img/1.png'
 
 export default function Design() {

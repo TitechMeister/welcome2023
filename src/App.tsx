@@ -5,7 +5,8 @@ import Teams from './pages/Teams/Teams';
 import Event from './pages/Event/Event';
 import Links from './pages/Links/Links';
 import FAQ from './pages/FAQ/FAQ';
-import Interview from './pages/Interview/Interview'
+import Interview from './pages/Interview/Interview';
+import Access from './pages/Access/Access';
 import NotFound from './pages/NotFound';
 import { Typography, createTheme, CssBaseline, ThemeProvider, Box, Divider, AppBar, List, ListItem, ListItemButton, Toolbar, IconButton, ListItemText, Drawer, Button } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -15,7 +16,6 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
-import Access from './pages/Access/Access';
 
 
 interface Props {

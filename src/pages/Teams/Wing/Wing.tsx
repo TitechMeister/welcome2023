@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ImageList, ImageListItem, Typography, Card, CardContent, CardHeader, Stack } from '@mui/material';
 import img_1 from './img/1.jpg'
 import img_2 from './img/2.jpg'

@@ -1,5 +1,4 @@
 import { Typography } from '@mui/material';
-import * as React from 'react';
 import img_map from './img/map.jpg'
 
 function Access() {

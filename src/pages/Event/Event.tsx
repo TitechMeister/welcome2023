@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Stack, Typography, Divider } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import img_1 from './img/1.jpg'

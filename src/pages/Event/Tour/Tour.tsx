@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ImageList, ImageListItem, Typography, Paper, Card, CardHeader, CardContent } from '@mui/material';
+import { Typography, Card, CardHeader, CardContent } from '@mui/material';
 
 export default function Tour() {
     return (

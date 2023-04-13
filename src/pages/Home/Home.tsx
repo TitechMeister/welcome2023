@@ -18,7 +18,12 @@ function Home() {
             <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${24}px)` } }}>
 
                 <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000}>
-                    <Box component={"img"} src={img_top}></Box>
+                    <Link to='/admission'>
+                        <Card>
+                            <Box component={"img"} src={img_top} />
+                            <p className="legend">入部方法</p>
+                        </Card>
+                    </Link>
                     <Link to='/teams'>
                         <Card>
                             <Box component={"img"} src={img_teams} />

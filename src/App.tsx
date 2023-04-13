@@ -16,6 +16,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
+import Admission from './pages/Admission/Admission';
 
 
 interface Props {
@@ -33,6 +34,7 @@ const pages = [
   { title: '班紹介', elem: <Teams />, url: 'teams' },
   { title: '新歓イベント', elem: <Event />, url: 'event' },
   { title: 'よくある質問', elem: <FAQ />, url: 'faq' },
+  { title: '入部方法', elem: <Admission />, url: 'admission' },
   { title: 'アクセス', elem: <Access />, url: 'access' },
   { title: 'リンク', elem: <Links />, url: 'links' }
 ]

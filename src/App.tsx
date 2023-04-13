@@ -15,7 +15,7 @@ import { Timeline } from 'react-twitter-widgets';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
+import { ScrollRestoration, Link, createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Admission from './pages/Admission/Admission';
 
 
@@ -29,14 +29,14 @@ interface Props {
 
 const drawerWidth = 240;
 const pages = [
-  { title: 'トップ', elem: <Home />, url: '/' },
-  { title: 'インタビュー', elem: <Interview />, url: 'interview' },
-  { title: '班紹介', elem: <Teams />, url: 'teams' },
-  { title: '新歓イベント', elem: <Event />, url: 'event' },
-  { title: 'よくある質問', elem: <FAQ />, url: 'faq' },
-  { title: '入部方法', elem: <Admission />, url: 'admission' },
-  { title: 'アクセス', elem: <Access />, url: 'access' },
-  { title: 'リンク', elem: <Links />, url: 'links' }
+  { title: 'トップ', element: <Home />, path: '/' },
+  { title: 'インタビュー', element: <Interview />, path: '/interview' },
+  { title: '班紹介', element: <Teams />, path: '/teams' },
+  { title: '新歓イベント', element: <Event />, path: '/event' },
+  { title: 'よくある質問', element: <FAQ />, path: '/faq' },
+  { title: '入部方法', element: <Admission />, path: '/admission' },
+  { title: 'アクセス', element: <Access />, path: '/access' },
+  { title: 'リンク', element: <Links />, path: '/links' }
 ]
 
 
@@ -69,7 +69,7 @@ export default function App(props: Props) {
       <List>
         {pages.map((item, idx) => (
           <ListItem key={item.title} disablePadding>
-            <Link to={item.url}>
+            <Link to={item.path}>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.title} />
               </ListItemButton>
@@ -82,11 +82,11 @@ export default function App(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
-  return (
-    <Box sx={{ display: 'flex' }}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <BrowserRouter basename='/welcome2023/'>
+  const router = createBrowserRouter(
+    [
+      {
+        path: '',
+        element: <div>
           <AppBar component="nav" color='primary' enableColorOnDark>
             <Toolbar>
               <IconButton
@@ -102,7 +102,7 @@ export default function App(props: Props) {
               <Typography variant='h6' padding={1}>Meister2023</Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block', flexGrow: 1 } }}>
                 {pages.map((item, idx) => (
-                  <Link key={item.url} to={item.url}>
+                  <Link key={item.path} to={item.path}>
                     <Button sx={{ color: '#fff' }}>
                       {item.title}
                     </Button>
@@ -132,27 +132,36 @@ export default function App(props: Props) {
               {drawer}
             </Drawer>
           </Box>
-          <Box component="main" sx={{ p: 3 }}>
-            <Toolbar />
-            <Routes>
-              <Route key={"index"} index element={<Home />} />
-              {pages.map((item) => {
-                return <Route key={item.url} path={item.url} element={item.elem}></Route>;
-              })}
-              <Route key="404" path="*" element={<NotFound />} />
-            </Routes>
-            <Timeline
-              dataSource={{
-                sourceType: 'profile',
-                screenName: 'meister_2023'
-              }}
-              options={{
-                height: "600",
-                theme: prefersDarkMode ? "dark" : "light"
-              }}
-            />
-          </Box>
-        </BrowserRouter>
+          <Outlet/>
+          <Timeline
+            dataSource={{
+              sourceType: 'profile',
+              screenName: 'meister_2023'
+            }}
+            options={{
+              height: "600",
+              theme: prefersDarkMode ? "dark" : "light"
+            }}
+          />
+          <ScrollRestoration/>
+        </div>,
+        children: pages,
+        errorElement: <NotFound />
+      }
+    ],
+    {
+      basename: '/welcome2023/'
+    }
+  );
+
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Box component="main" sx={{ p: 3 }}>
+          <Toolbar />
+          <RouterProvider router={router}></RouterProvider>
+        </Box>
 
       </ThemeProvider>
     </Box>

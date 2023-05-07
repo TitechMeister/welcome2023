@@ -8,6 +8,8 @@ import Electronics from './Electronics/Electronics';
 import Wing from './Wing/Wing';
 import Meeting from './Meeting/Meeting';
 import Contest from './Contest/Contest';
+import ASU from './ASU/ASU';
+import './Event.css';
 
 function Event() {
     return (
@@ -22,11 +24,12 @@ function Event() {
                 </ImageListItem>
             </ImageList>
             <Stack spacing={2}>
-                <Meeting />
+                <ASU />
                 <Tour />
-                <Electronics />
                 <Wing />
+                <Electronics />
                 <Contest />
+                <Meeting />
             </Stack>
         </div>
     )

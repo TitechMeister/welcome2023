@@ -1,0 +1,50 @@
+name: Deploy to MeisterOnline
+
+on:
+  push:
+    branches:
+      - main
+      - deploy-debug
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install git-ftp
+        run: sudo apt update && sudo apt install -y git-ftp
+      - name: Install curl with ssh
+        run: |
+          sudo apt install libssh2-1-dev libssl-dev
+          wget https://curl.haxx.se/download/curl-7.69.1.tar.gz
+          tar zxf curl-*.tar.gz
+          rm curl-*.tar.gz
+          cd curl-*
+          ls
+          ./configure --with-ssl --with-libssh2 --prefix=$HOME/local/curl
+          make
+          make install
+      - name: Create SSH key files
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key && chmod 600 key
+          ssh-keygen -y -f key > key.pub && chmod 644 key.pub
+          ssh-keyscan -H meister.ne.jp >> ~/.ssh/known_hosts
+      - name: Deploy
+        run: |
+          export PATH=$HOME/local/curl/bin:$PATH
+          .github/scripts/deploy.sh
+        env:
+          FTP_URL: ${{ secrets.FTP_URL }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          PRIVATE_KEY_PATH: key
+      - name: Notify slack
+        uses: 8398a7/action-slack@v2
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,action,author
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()

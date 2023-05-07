@@ -1,18 +1,20 @@
 import { ImageList, ImageListItem, Typography, Card, CardHeader, CardContent } from '@mui/material';
 import img_1 from './img/1.jpg'
 import img_2 from './img/2.jpg'
+import img_3 from './img/3.jpg'
 
-export default function Contest() {
+export default function ASU() {
     return (
-        <div className='close'>
+        <div>
             <Card>
-                <CardHeader title="模型飛行機コンテスト" />
+                <CardHeader title="ASU (Arena Set-Up)" />
                 <CardContent>
                     <Typography>
-                        5月以降 @ Meister倉庫 <br />
-                        4,5人のグループに分かれて模型飛行機をつくり、その飛距離を競います。<br /><br />
-
-                        4/28追記：今年度の募集は終了しました。
+                        5月6日深夜～5月7日朝 <br />
+                        昨年の8月から、私たちは鳥人間コンテストに向けて機体を製作してきました。<br />
+                        みんなで作った機体を初めて組み上げるのが、このASUです。<br/>
+                        実際の機体を近くで見ることができる数少ない機会です！<br/>
+                        興味ある方は前日までにTwitterまたはLINEで連絡してください。
                     </Typography>
                     <ImageList>
                         <ImageListItem key="1">
